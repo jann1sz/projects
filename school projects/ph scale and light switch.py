@@ -35,7 +35,9 @@ def chemical_strength(pH):
        return('bad measurement')
 
 
-chemical_strength(0.1)
+
+#-------------------------------------------------------
+
 
 
 #task 2: light switches
@@ -67,4 +69,4 @@ def light_status(s1, s2):
         return('off')
 
 
-light_status(99, 0)
+
