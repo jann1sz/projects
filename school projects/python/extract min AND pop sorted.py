@@ -33,3 +33,35 @@ def extract_min(xs):
     
 
 extract_min([9,9,3,8,8,3,7,20,6,3])
+
+#-------------------------------------------------------------------------------
+
+#this function uses the extract min function to find the minimum and arranges
+#xs in order from smallest to largest values.
+def pop_sorted(xs):
+
+    #copy list holds the copy of xs
+    #ordered list holds the final ordered list of the list copy
+    copy = []
+    ordered = []
+    
+    #loop that appends all the values in xs to the list copy
+    for i in range(len(xs)):
+        value = xs[i]
+        copy.append(value)
+    
+    #loop that uses extract_min to find the minimum and append it to the 
+    #ordered list
+    for i in range(len(copy)):
+        minimum = extract_min(copy)
+        ordered.append(minimum)
+    
+    #loop that removes each minimum one-by-one from the list copy
+    for j in range(len(copy)):
+        value = copy[j]
+        if value == minimum:
+            copy.pop(j)
+        continue
+    return ordered
+
+pop_sorted([2,3,4,2,4,6,5])
